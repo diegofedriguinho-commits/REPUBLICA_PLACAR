@@ -5,32 +5,33 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>REPUBLICA O RETORNO</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 body{background:#000;display:flex;justify-content:center;font-family:Arial Black,Arial}
 .app{width:100%;max-width:400px;background:#000;border:2px solid #d4a017;display:flex;flex-direction:column;min-height:100vh}
-.topo{background:linear-gradient(#1a1500,#000);padding:8px;text-align:center;border-bottom:2px solid #d4a017;display:flex;align-items:center;justify-content:center;gap:6px}
-.brasao-css{width:40px;height:40px;background:radial-gradient(#3a3000,#000);border:2px solid #d4a017;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;box-shadow:0 0 8px #d4a01766}
-.topo h1{color:#d4a017;font-size:12px;letter-spacing:1px;line-height:1.1;text-align:left}
-.topo .sub{color:#d4a017aa;font-size:6px;letter-spacing:1px;font-family:Arial;display:block}
-.banner{background:#d4a017;color:#000;text-align:center;padding:5px;font-weight:900;font-size:11px}
+.topo{background:#000;padding:8px 10px;text-align:center;border-bottom:2px solid #d4a017;display:flex;align-items:center;justify-content:center;gap:8px}
+.topo img{width:42px;height:42px;border-radius:50%;border:2px solid #d4a017;flex-shrink:0;box-shadow:0 0 6px #d4a017}
+.topo h1{color:#d4a017;font-size:12px;letter-spacing:1px;line-height:1;text-align:left}
+.topo .sub{color:#d4a017aa;font-size:6px;letter-spacing:1px;font-family:Arial;display:block;margin-top:2px}
+.banner{background:#d4a017;color:#000;text-align:center;padding:5px;font-weight:900;font-size:11px;letter-spacing:1px}
 .pontos{background:#0a0a0a;border:2px solid #d4a017;margin:4px;padding:8px;text-align:center;border-radius:6px}
-.tit{color:#d4a017aa;font-size:9px}
+.tit{color:#d4a017aa;font-size:9px;letter-spacing:1px}
 .placar{display:flex;justify-content:center;gap:12px;align-items:center;margin:4px 0}
-.n{font-size:44px;color:#f1d585;line-height:1;font-weight:900}
+.n{font-size:44px;color:#f1d585;line-height:1;font-weight:900;text-shadow:0 0 8px #d4a017}
 .s{color:#d4a017aa;font-size:18px}
 .meta{color:#d4a017aa;font-size:8px;font-family:Arial}
 .acoes-pontos{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:6px}
-.acoes-pontos button{border:1.5px solid;padding:9px 3px;border-radius:5px;font-weight:900;font-size:9px}
+.acoes-pontos button{border:1.5px solid;padding:9px 3px;border-radius:5px;font-weight:900;font-size:9px;touch-action:manipulation}
 .btn-menos{background:#1a1a1a;color:#ff6b6b;border-color:#ff6b6b}
 .btn-mais{background:#1a1a1a;color:#25D366;border-color:#25D366}
 .btn-truco{background:#d4a017;color:#000;border-color:#d4a017}
+.acoes-pontos button:active{transform:scale(0.92)}
 .acoes-gerais{display:flex;gap:3px;margin-top:5px}
 .acoes-gerais button{flex:1;border:1px solid #d4a017;padding:6px;border-radius:4px;font-weight:900;font-size:8px;background:#1a1a1a;color:#d4a017}
 .duplo{display:flex;gap:4px;padding:0 4px 4px}
 .box{flex:1;background:#000;border:2px solid #d4a017;padding:6px;text-align:center;border-radius:6px}
 .box h3{color:#f1d585;font-size:13px}
 .vit{color:#d4a017aa;font-size:8px;margin-top:5px}
-.vit b{font-size:32px;color:#f1d585;display:block;line-height:1}
+.vit b{font-size:32px;color:#f1d585;display:block;line-height:1;text-shadow:0 0 6px #d4a017}
 .btns{display:flex;gap:4px;margin-top:4px}
 .btns button{flex:1;background:#000;border:1px solid #d4a017;color:#f1d585;padding:7px;border-radius:4px;font-weight:900;font-size:11px}
 .bottom{margin:4px;background:#000;border:1px solid #d4a01799;padding:5px;display:flex;justify-content:space-around;text-align:center;color:#d4a017aa;font-size:7px;font-family:Arial;border-radius:5px;margin-top:auto}
@@ -41,7 +42,7 @@ body{background:#000;display:flex;justify-content:center;font-family:Arial Black
 <div class="app">
 
 <div class="topo">
-<div class="brasao-css">🍢</div>
+<img src="./brasao.jpg" alt="brasao" onerror="this.src='https://i.imgur.com/JqYeZnl.png'">
 <div>
 <h1>REPUBLICA O RETORNO</h1>
 <span class="sub">CHURRASCO • BEER • CAIPIRINHA • EST. 2023</span>
