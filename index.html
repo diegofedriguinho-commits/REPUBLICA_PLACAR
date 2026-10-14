@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>REPUBLICA O RETORNO - PLACAR OFICIAL TRUCO</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;display:flex;justify-content:center;font-family:Arial Black,Arial}
+.app{width:100%;max-width:420px;background:#000;border:3px solid #d4a017;position:relative;overflow:hidden}
+.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.9}
+.content{position:relative;z-index:2;padding:10px;background:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.9))}
+.top{display:flex;justify-content:center}
+.top img{width:85%;filter:drop-shadow(0 0 10px #d4a017)}
+.banner{background:linear-gradient(90deg,#1a1200,#3a2a00,#1a1200);border:2px solid #d4a017;color:#f1d585;text-align:center;padding:10px;margin:8px 0;font-size:18px;letter-spacing:2px}
+.duplo{display:flex;gap:8px;position:relative}
+.time{flex:1;background:rgba(0,0,0,.75);border:1.5px solid #d4a01799;padding:10px;text-align:center}
+.time h3{color:#f1d585;font-size:24px}
+.time input{width:100%;background:#0008;border:1px solid #d4a01766;color:#d4a017aa;padding:6px;margin:6px 0;border-radius:4px;font-size:11px;text-align:center}
+.vit{color:#d4a017aa;font-size:10px;margin-top:6px}.vit b{font-size:48px;color:#f1d585;display:block;line-height:1;text-shadow:0 0 8px #d4a017}
+.vs{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:50px;height:50px;background:#000;border:2px solid #d4a017;border-radius:50%;color:#f1d585;display:flex;align-items:center;justify-content:center;font-weight:900;z-index:3}
+.btns{display:flex;gap:6px;margin-top:6px}.btns button{flex:1;background:#000;border:1.5px solid #d4a017;color:#f1d585;padding:7px;border-radius:6px;font-weight:700}
+.pontos{background:rgba(0,0,0,.85);border:2px solid #d4a017;padding:12px;margin:12px 0;text-align:center}
+.pontos .titulo{color:#d4a017aa;font-size:11px;letter-spacing:1px}
+.placar{display:flex;justify-content:center;gap:20px;align-items:center;margin:8px 0}
+.placar .n{font-size:70px;color:#f1d585;font-weight:900;text-shadow:0 0 10px #d4a017}
+.placar .s{font-size:24px;color:#d4a017aa}
+.meta{color:#d4a017aa;font-size:10px}
+.acoes{display:flex;gap:6px;margin-top:10px}.acoes button{flex:1;background:linear-gradient(#3a2a00,#1a1200);border:1.5px solid #d4a017;color:#f1d585;padding:9px;border-radius:7px;font-size:10px;font-weight:700}
+.bottom{background:rgba(0,0,0,.85);border:1.5px solid #d4a01799;padding:10px;display:flex;justify-content:space-around;text-align:center;color:#d4a017aa;font-size:10px}
+.bottom span{font-size:20px;display:block}
+</style>
+</head>
+<body>
+<div class="app">
+<img class="bg" src="https://images.unsplash.com/photo-1558030006-450066393d65?q=80&w=600&auto=format&fit=crop" alt="">
+<div class="content">
+<div class="top">
+<img src="https://i.imgur.com/8Km9tLL.jpg" alt="REPUBLICA O RETORNO" onerror="this.style.display='none'">
+</div>
+<div style="text-align:center;color:#d4a017;font-size:20px;padding:8px;border:2px solid #d4a017;background:#000;margin-bottom:8px">
+REPUBLICA O RETORNO<br><span style="font-size:10px;letter-spacing:4px;opacity:.7">CASA REPUBLICANA • CHURRASCO • CAIPIRINHA • CERVEJA • EST. 2025</span>
+</div>
+<div class="banner">★ PLACAR OFICIAL - TRUCO ★</div>
+<div class="duplo">
+<div class="time"><h3>NOS 🇧🇷</h3><input id="jn" placeholder="Jogadores: Digite o nome..."><div class="vit">VITÓRIAS<b id="vn">0</b></div><div class="btns"><button onclick="vit('nos',-1)">-1</button><button onclick="vit('nos',1)">+1</button></div></div>
+<div class="vs">VS</div>
+<div class="time"><h3>ELES 🛡️</h3><input id="je" placeholder="Jogadores: Digite o nome..."><div class="vit">VITÓRIAS<b id="ve">0</b></div><div class="btns"><button onclick="vit('eles',-1)">-1</button><button onclick="vit('eles',1)">+1</button></div></div>
+</div>
+<div class="pontos">
+<div class="titulo">PONTOS DA PARTIDA</div>
+<div class="placar"><div class="n" id="pn">0</div><div class="s">—</div><div class="n" id="pe">0</div></div>
+<div class="meta" id="meta">Meta: 12 pontos • Rodada 1/12</div>
+<div class="acoes"><button onclick="zerar()">↻ REINICIAR</button><button onclick="zerar()">Zerar Partida</button><button onclick="novo()">⊕ NOVO JOGO</button></div>
+<div class="acoes"><button style="background:#25D366;border-color:#25D366;color:#fff" onclick="pt('nos',1)">+1 NÓS</button><button style="background:#d4a017;color:#000" onclick="pt('nos',3)">+3 TRUCO</button><button style="background:#25D366;border-color:#25D366;color:#fff" onclick="pt('eles',1)">+1 ELES</button><button style="background:#d4a017;color:#000" onclick="pt('eles',3)">+3 TRUCO</button></div>
+</div>
+<div class="bottom"><div><span>🍢</span>Churrasco</div><div><span>🍺</span>Cerveja</div><div><span>🍹</span>Caipirinha</div></div>
+<div style="text-align:center;color:#d4a01755;font-size:8px;margin-top:8px">PARTIDO REPUBLICANO • ESTILO TRUCO BRASILEIRO • REPUBLICA O RETORNO SINCE 2023</div>
+</div>
+</div>
+<script>
+let pn=0,pe=0,vn=0,ve=0,rod=1;
+function pt(t,v){if(t=='nos'){pn+=v;if(pn<0)pn=0;if(pn>12)pn=12;document.getElementById('pn').innerText=pn;check()}else{pe+=v;if(pe<0)pe=0;if(pe>12)pe=12;document.getElementById('pe').innerText=pe;check()}}
+function check(){if(pn==12||pe==12){if(pn==12){vn++;document.getElementById('vn').innerText=vn;alert('NOS VENCEU!')}else{ve++;document.getElementById('ve').innerText=ve;alert('ELES VENCEU!')}pn=0;pe=0;rod++;document.getElementById('pn').innerText='0';document.getElementById('pe').innerText='0';document.getElementById('meta').innerText=`Meta: 12 pontos • Rodada ${rod}/12`}}
+function vit(t,v){if(t=='nos'){vn+=v;if(vn<0)vn=0;document.getElementById('vn').innerText=vn}else{ve+=v;if(ve<0)ve=0;document.getElementById('ve').innerText=ve}}
+function zerar(){pn=0;pe=0;document.getElementById('pn').innerText='0';document.getElementById('pe').innerText='0'}
+function novo(){if(confirm('Novo jogo completo?')){pn=0;pe=0;vn=0;ve=0;rod=1;document.getElementById('pn').innerText='0';document.getElementById('pe').innerText='0';document.getElementById('vn').innerText='0';document.getElementById('ve').innerText='0';document.getElementById('meta').innerText='Meta: 12 pontos • Rodada 1/12'}}
+</script>
+</body>
+</html>
