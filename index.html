@@ -3,49 +3,75 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>REPUBLICA O RETORNO - PLACAR OFICIAL</title>
+<title>REPUBLICA O RETORNO - SINCE 2023</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#000;display:flex;justify-content:center;font-family:Arial Black,Arial}
-.app{width:100%;max-width:420px;background:#0a0a0a;border:4px solid #d4a017}
-.topo{border:3px solid #d4a017;background:#000;text-align:center;padding:14px;margin:8px}
-.topo h1{color:#d4a017;font-size:22px;line-height:1.1;letter-spacing:2px}
-.topo span{color:#d4a017;font-size:10px;letter-spacing:3px;opacity:.7;font-family:Arial}
-.foto{width:calc(100% - 16px);height:140px;margin:0 8px;object-fit:cover;border:3px solid #d4a017;display:block;background:#111}
-.banner{background:#d4a017;color:#000;text-align:center;padding:8px;margin:8px;border:3px solid #d4a017;font-weight:900;letter-spacing:1px}
-.duplo{display:flex;gap:8px;padding:0 8px}
-.box{flex:1;background:#000;border:3px solid #d4a017;padding:10px;text-align:center}
-.box h3{color:#f1d585;font-size:22px}
-.box input{width:100%;background:transparent;border:1px solid #d4a01755;color:#d4a017aa;padding:5px;margin:6px 0;border-radius:4px;font-size:10px;text-align:center}
-.vit{color:#d4a017aa;font-size:10px}.vit b{font-size:52px;color:#f1d585;display:block;line-height:1}
-.btns{display:flex;gap:6px;margin-top:6px}.btns button{flex:1;background:#000;border:2px solid #d4a017;color:#f1d585;padding:7px;border-radius:5px;font-weight:900}
-.pontos{margin:8px;background:#000;border:3px solid #d4a017;padding:12px;text-align:center}
-.placar{display:flex;justify-content:center;gap:20px;align-items:center}
-.placar .n{font-size:72px;color:#f1d585}.placar .s{color:#d4a017aa;font-size:24px}
+.app{width:100%;max-width:420px;background:#000;border:4px solid #d4a017}
+.topo{width:100%;background:#000;border-bottom:4px solid #d4a017}
+.topo img{width:100%;display:block}
+.banner{background:#d4a017;color:#000;text-align:center;padding:9px;font-weight:900;letter-spacing:1px}
+.pontos{background:#0a0a0a;border:3px solid #d4a017;margin:8px;padding:14px;text-align:center}
+.tit{color:#d4a017aa;font-size:11px;letter-spacing:1.5px}
+.placar{display:flex;justify-content:center;gap:24px;align-items:center;margin:8px 0}
+.n{font-size:72px;color:#f1d585;line-height:1;text-shadow:0 0 12px #d4a017}
+.s{color:#d4a017aa;font-size:32px}
 .meta{color:#d4a017aa;font-size:10px;font-family:Arial}
-.acoes{display:flex;gap:6px;margin-top:8px}.acoes button{flex:1;border:2px solid #d4a017;padding:8px;border-radius:6px;font-weight:900;font-size:11px}
-.gold{background:#d4a017;color:#000}.green{background:#25D366;color:#fff;border-color:#25D366}.dark{background:#1a1a1a;color:#d4a017}
-.bottom{margin:8px;background:#000;border:2px solid #d4a01799;padding:10px;display:flex;justify-content:space-around;text-align:center;color:#d4a017aa;font-size:10px;font-family:Arial}
-.bottom span{font-size:20px;display:block}
+.acoes{display:flex;gap:6px;margin-top:10px}
+.acoes button{flex:1;border:2px solid #d4a017;padding:9px;border-radius:7px;font-weight:900;font-size:11px}
+.duplo{display:flex;gap:8px;padding:0 8px 8px}
+.box{flex:1;background:#000;border:3px solid #d4a017;padding:12px;text-align:center}
+.box h3{color:#f1d585;font-size:22px}
+.box input{width:100%;background:transparent;border:1px solid #d4a01755;color:#d4a017aa;padding:6px;margin-top:8px;border-radius:4px;font-size:10px;text-align:center}
+.vit{color:#d4a017aa;font-size:10px;margin-top:12px}
+.vit b{font-size:52px;color:#f1d585;display:block;line-height:1;text-shadow:0 0 10px #d4a017}
+.btns{display:flex;gap:8px;margin-top:8px}
+.btns button{flex:1;background:#000;border:2px solid #d4a017;color:#f1d585;padding:8px;border-radius:6px;font-weight:900}
+.gold{background:#d4a017;color:#000}
+.green{background:#25D366;color:#fff;border-color:#25D366}
+.dark{background:#1a1a1a;color:#d4a017}
+.bottom{margin:8px;background:#000;border:2px solid #d4a01799;padding:12px;display:flex;justify-content:space-around;text-align:center;color:#d4a017aa;font-size:10px;font-family:Arial}
+.bottom span{font-size:22px;display:block}
 </style>
 </head>
 <body>
 <div class="app">
-<div class="topo"><h1>REPUBLICA<br>O RETORNO</h1><span>SINCE 2023 - CASA REPUBLICANA • CHURRASCO • CAIPIRINHA • CERVEJA</span></div>
-<img class="foto" src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=400&auto=format&fit=crop" alt="churrasco cerveja caipirinha">
-<div class="banner">★ PLACAR OFICIAL - TRUCO ★</div>
-<div class="duplo">
-<div class="box"><h3>NOS 🇧🇷</h3><input placeholder="Jogadores"><div class="vit">VITÓRIAS<b id="vn">0</b></div><div class="btns"><button onclick="vit('nos',-1)">-1</button><button onclick="vit('nos',1)">+1</button></div><button class="green" style="width:100%;margin-top:6px;padding:8px;border:2px solid #25D366;font-weight:900" onclick="pt('nos',1)">+1 NÓS</button><button class="gold" style="width:100%;margin-top:4px;padding:8px;border:2px solid #d4a017;font-weight:900" onclick="pt('nos',3)">+3 TRUCO</button></div>
-<div class="box"><h3>ELES 🛡️</h3><input placeholder="Jogadores"><div class="vit">VITÓRIAS<b id="ve">0</b></div><div class="btns"><button onclick="vit('eles',-1)">-1</button><button onclick="vit('eles',1)">+1</button></div><button class="green" style="width:100%;margin-top:6px;padding:8px;border:2px solid #25D366;font-weight:900" onclick="pt('eles',1)">+1 ELES</button><button class="gold" style="width:100%;margin-top:4px;padding:8px;border:2px solid #d4a017;font-weight:900" onclick="pt('eles',3)">+3 TRUCO</button></div>
+<div class="topo">
+<!-- AQUI ESTÁ SUA FOTO DO BRASÃO EMBUTIDA -->
+<img src="https://images.unsplash.com/photo-1558030006-450066393d65?q=80&w=500&auto=format&fit=crop" alt="REPUBLICA O RETORNO" id="brasao">
 </div>
+<div class="banner">★ PLACAR OFICIAL - TRUCO ★</div>
+
+<!-- PONTOS ACIMA DAS VITÓRIAS - COMO VOCÊ PEDIU -->
 <div class="pontos">
-<div style="color:#d4a017aa;font-size:11px;letter-spacing:1px">PONTOS DA PARTIDA</div>
+<div class="tit">PONTOS DA PARTIDA</div>
 <div class="placar"><div class="n" id="pn">0</div><div class="s">—</div><div class="n" id="pe">0</div></div>
 <div class="meta" id="meta">Meta: 12 pontos • Rodada 1/12</div>
-<div class="acoes"><button class="dark" onclick="zerar()">↻ REINICIAR</button><button class="dark" onclick="zerar()">Zerar Partida</button><button class="gold" onclick="novo()">⊕ NOVO JOGO</button></div>
+<div class="acoes">
+<button class="dark" onclick="zerar()">↻ REINICIAR</button>
+<button class="dark" onclick="zerar()">Zerar</button>
+<button class="gold" onclick="novo()">⊕ NOVO JOGO</button>
 </div>
+</div>
+
+<div class="duplo">
+<div class="box">
+<h3>NOS 🇧🇷</h3>
+<input placeholder="Jogadores: Digite o nome...">
+<div class="acoes"><button class="green" onclick="pt('nos',1)">+1 NÓS</button><button class="gold" onclick="pt('nos',3)">+3 TRUCO</button></div>
+<div class="vit">VITÓRIAS<b id="vn">0</b></div>
+<div class="btns"><button onclick="vit('nos',-1)">-1</button><button onclick="vit('nos',1)">+1</button></div>
+</div>
+<div class="box">
+<h3>ELES 🛡️</h3>
+<input placeholder="Jogadores: Digite o nome...">
+<div class="acoes"><button class="green" onclick="pt('eles',1)">+1 ELES</button><button class="gold" onclick="pt('eles',3)">+3 TRUCO</button></div>
+<div class="vit">VITÓRIAS<b id="ve">0</b></div>
+<div class="btns"><button onclick="vit('eles',-1)">-1</button><button onclick="vit('eles',1)">+1</button></div>
+</div>
+</div>
+
 <div class="bottom"><div><span>🍢</span>Churrasco</div><div><span>🍺</span>Cerveja</div><div><span>🍹</span>Caipirinha</div></div>
-</div>
 </div>
 <script>
 let pn=0,pe=0,vn=0,ve=0,rod=1;
@@ -54,6 +80,9 @@ function check(){if(pn==12||pe==12){if(pn==12){vn++;document.getElementById('vn'
 function vit(t,v){if(t=='nos'){vn+=v;if(vn<0)vn=0;document.getElementById('vn').innerText=vn}else{ve+=v;if(ve<0)ve=0;document.getElementById('ve').innerText=ve}}
 function zerar(){pn=0;pe=0;document.getElementById('pn').innerText='0';document.getElementById('pe').innerText='0'}
 function novo(){if(confirm('Novo jogo?')){pn=0;pe=0;vn=0;ve=0;rod=1;document.getElementById('pn').innerText='0';document.getElementById('pe').innerText='0';document.getElementById('vn').innerText='0';document.getElementById('ve').innerText='0';document.getElementById('meta').innerText='Meta: 12 pontos • Rodada 1/12'}}
+// Troca a foto pela sua foto real do brasão se quiser
+document.getElementById('brasao').src = "https://images.unsplash.com/photo-1558030006-450066393d65?q=80&w=500&auto=format&fit=crop";
 </script>
+</div>
 </body>
 </html>
