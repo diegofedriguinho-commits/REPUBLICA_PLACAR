@@ -7,67 +7,62 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 body{background:#000;display:flex;justify-content:center;min-height:100vh;font-family:Arial Black,Arial}
-.app{width:100%;max-width:400px;min-height:100vh;background:#000;border-left:3px solid #d4a017;border-right:3px solid #d4a017;display:flex;flex-direction:column}
-
-/* BRASAO PEQUENO E RESPONSIVO - ADAPTA NO CELULAR */
-.topo{background:#000;border-bottom:3px solid #d4a017;padding:10px 8px;text-align:center;flex-shrink:0}
-.brasao-mini{width:100%;max-width:200px;margin:0 auto 8px;display:block;border:2px solid #d4a017;border-radius:50%;aspect-ratio:1/1;object-fit:cover}
-.topo h1{color:#d4a017;font-size:clamp(16px,4.5vw,20px);letter-spacing:2px;line-height:1.1;text-shadow:0 0 8px #d4a01755}
-.topo .sub{color:#d4a017aa;font-size:8px;letter-spacing:2px;margin-top:4px;font-family:Arial}
-.topo .icons{margin-top:6px;font-size:14px;display:flex;justify-content:center;gap:8px}
-
-.banner{background:#d4a017;color:#000;text-align:center;padding:8px;font-weight:900;font-size:13px;letter-spacing:1px}
-.pontos{background:#0a0a0a;border:2px solid #d4a017;margin:6px;padding:10px;text-align:center;border-radius:8px}
-.tit{color:#d4a017aa;font-size:10px;letter-spacing:1px}
-.placar{display:flex;justify-content:center;gap:16px;align-items:center;margin:6px 0}
-.n{font-size:clamp(42px,12vw,56px);color:#f1d585;line-height:1;text-shadow:0 0 10px #d4a017;font-weight:900}
-.s{color:#d4a017aa;font-size:24px}
-.meta{color:#d4a017aa;font-size:9px;font-family:Arial}
-.acoes-pontos{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}
-.acoes-pontos button{border:2px solid;padding:12px 6px;border-radius:8px;font-weight:900;font-size:11px;touch-action:manipulation}
+.app{width:100%;max-width:400px;background:#000;border:2px solid #d4a017;display:flex;flex-direction:column;min-height:100vh}
+.topo{background:#000;padding:8px;text-align:center;border-bottom:2px solid #d4a017;display:flex;align-items:center;justify-content:center;gap:8px}
+.topo img{width:48px;height:48px;border-radius:50%;border:2px solid #d4a017;flex-shrink:0}
+.topo h1{color:#d4a017;font-size:13px;letter-spacing:1px;line-height:1}
+.topo .sub{color:#d4a017aa;font-size:7px;letter-spacing:1px;font-family:Arial;display:block}
+.banner{background:#d4a017;color:#000;text-align:center;padding:6px;font-weight:900;font-size:12px}
+.pontos{background:#0a0a0a;border:2px solid #d4a017;margin:5px;padding:8px;text-align:center;border-radius:6px}
+.tit{color:#d4a017aa;font-size:9px}
+.placar{display:flex;justify-content:center;gap:12px;align-items:center;margin:4px 0}
+.n{font-size:48px;color:#f1d585;line-height:1;font-weight:900;text-shadow:0 0 8px #d4a017}
+.s{color:#d4a017aa;font-size:20px}
+.meta{color:#d4a017aa;font-size:8px;font-family:Arial}
+.acoes-pontos{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:6px}
+.acoes-pontos button{border:1.5px solid;padding:10px 4px;border-radius:6px;font-weight:900;font-size:10px;touch-action:manipulation}
 .btn-menos{background:#1a1a1a;color:#ff6b6b;border-color:#ff6b6b}
 .btn-mais{background:#1a1a1a;color:#25D366;border-color:#25D366}
 .btn-truco{background:#d4a017;color:#000;border-color:#d4a017}
 .acoes-pontos button:active{transform:scale(0.95)}
-.acoes-gerais{display:flex;gap:5px;margin-top:8px}
-.acoes-gerais button{flex:1;border:1.5px solid #d4a017;padding:8px;border-radius:6px;font-weight:900;font-size:10px;background:#1a1a1a;color:#d4a017}
-.duplo{display:flex;gap:6px;padding:0 6px 6px}
-.box{flex:1;background:#000;border:2px solid #d4a017;padding:8px;text-align:center;border-radius:8px}
-.box h3{color:#f1d585;font-size:16px}
-.box input{width:100%;background:transparent;border:1px solid #d4a01755;color:#d4a017aa;padding:6px;margin-top:6px;border-radius:5px;font-size:10px;text-align:center}
-.vit{color:#d4a017aa;font-size:9px;margin-top:8px}
-.vit b{font-size:clamp(32px,8vw,42px);color:#f1d585;display:block;line-height:1;text-shadow:0 0 8px #d4a017}
-.btns{display:flex;gap:6px;margin-top:6px}
-.btns button{flex:1;background:#000;border:1.5px solid #d4a017;color:#f1d585;padding:10px;border-radius:6px;font-weight:900;font-size:14px}
-.bottom{margin:6px;background:#000;border:1.5px solid #d4a01799;padding:8px;display:flex;justify-content:space-around;text-align:center;color:#d4a017aa;font-size:9px;font-family:Arial;border-radius:6px;margin-top:auto}
-.bottom span{font-size:16px;display:block}
+.acoes-gerais{display:flex;gap:4px;margin-top:6px}
+.acoes-gerais button{flex:1;border:1px solid #d4a017;padding:6px;border-radius:5px;font-weight:900;font-size:9px;background:#1a1a1a;color:#d4a017}
+.duplo{display:flex;gap:5px;padding:0 5px 5px}
+.box{flex:1;background:#000;border:2px solid #d4a017;padding:6px;text-align:center;border-radius:6px}
+.box h3{color:#f1d585;font-size:14px}
+.vit{color:#d4a017aa;font-size:8px;margin-top:6px}
+.vit b{font-size:36px;color:#f1d585;display:block;line-height:1}
+.btns{display:flex;gap:4px;margin-top:4px}
+.btns button{flex:1;background:#000;border:1px solid #d4a017;color:#f1d585;padding:8px;border-radius:5px;font-weight:900;font-size:12px}
+.bottom{margin:5px;background:#000;border:1px solid #d4a01799;padding:6px;display:flex;justify-content:space-around;text-align:center;color:#d4a017aa;font-size:8px;font-family:Arial;border-radius:5px;margin-top:auto}
+.bottom span{font-size:12px;display:block}
 </style>
 </head>
 <body>
 <div class="app">
 
 <div class="topo">
-<!-- BRASAO PEQUENO 50px - ADAPTA NO CELULAR -->
-<img src="foto.jpg">
+<img src="https://i.imgur.com/8Km9tLL.png" alt="brasao" id="brasao" style="width:48px;height:48px">
+<div style="text-align:left">
 <h1>REPUBLICA O RETORNO</h1>
-<div class="sub">CHURRASCO • BEER • CAIPIRINHA • EST. 2024</div>
-<div class="icons">🍢 ★ 🍺 ★ 🍹</div>
+<span class="sub">CHURRASCO • BEER • CAIPIRINHA</span>
+</div>
 </div>
 
-<div class="banner">★ PLACAR OFICIAL - TRUCO ★</div>
+<div class="banner">PLACAR OFICIAL - TRUCO - SINCE 2023</div>
 
 <div class="pontos">
 <div class="tit">PONTOS DA PARTIDA</div>
 <div class="placar"><div class="n" id="pn">0</div><div class="s">—</div><div class="n" id="pe">0</div></div>
-<div class="meta" id="meta">Meta: 12 pontos • Rodada 1/12</div>
+<div class="meta" id="meta">Meta: 12 • Rodada 1/12</div>
 
 <div class="acoes-pontos">
 <button class="btn-menos" onclick="pt('nos',-1)">-1 NÓS</button>
 <button class="btn-mais" onclick="pt('nos',1)">+1 NÓS</button>
 <button class="btn-menos" onclick="pt('eles',-1)">-1 ELES</button>
 <button class="btn-mais" onclick="pt('eles',1)">+1 ELES</button>
-<button class="btn-truco" onclick="pt('nos',3)">+3 TRUCO NÓS</button>
-<button class="btn-truco" onclick="pt('eles',3)">+3 TRUCO ELES</button>
+<button class="btn-truco" onclick="pt('nos',3)">+3 TRUCO</button>
+<button class="btn-truco" onclick="pt('eles',3)">+3 TRUCO</button>
 </div>
 
 <div class="acoes-gerais">
@@ -80,29 +75,30 @@ body{background:#000;display:flex;justify-content:center;min-height:100vh;font-f
 <div class="duplo">
 <div class="box">
 <h3>NOS 🇧🇷</h3>
-<input placeholder="Jogadores...">
 <div class="vit">VITÓRIAS<b id="vn">0</b></div>
 <div class="btns"><button onclick="vit('nos',-1)">-1</button><button onclick="vit('nos',1)">+1</button></div>
 </div>
 <div class="box">
 <h3>ELES 🛡️</h3>
-<input placeholder="Jogadores...">
 <div class="vit">VITÓRIAS<b id="ve">0</b></div>
 <div class="btns"><button onclick="vit('eles',-1)">-1</button><button onclick="vit('eles',1)">+1</button></div>
 </div>
 </div>
 
-<div class="bottom"><div><span>🍢</span>Churrasco</div><div><span>🍺</span>Cerveja</div><div><span>🍹</span>Caipirinha</div></div>
+<div class="bottom"><div>🍢 Churrasco</div><div>🍺 Cerveja</div><div>🍹 Caipirinha</div></div>
 
 </div>
 
 <script>
 let pn=0,pe=0,vn=0,ve=0,rod=1;
 function pt(t,v){if(t=='nos'){pn+=v;if(pn<0)pn=0;if(pn>12)pn=12;document.getElementById('pn').innerText=pn;check()}else{pe+=v;if(pe<0)pe=0;if(pe>12)pe=12;document.getElementById('pe').innerText=pe;check()}}
-function check(){if(pn==12||pe==12){if(pn==12){vn++;document.getElementById('vn').innerText=vn;alert('NOS VENCEU!')}else{ve++;document.getElementById('ve').innerText=ve;alert('ELES VENCEU!')}pn=0;pe=0;rod++;document.getElementById('pn').innerText='0';document.getElementById('pe').innerText='0';document.getElementById('meta').innerText=`Meta: 12 pontos • Rodada ${rod}/12`}}
+function check(){if(pn==12||pe==12){if(pn==12){vn++;document.getElementById('vn').innerText=vn}else{ve++;document.getElementById('ve').innerText=ve}pn=0;pe=0;rod++;document.getElementById('pn').innerText='0';document.getElementById('pe').innerText='0';document.getElementById('meta').innerText=`Meta: 12 • Rodada ${rod}/12`}}
 function vit(t,v){if(t=='nos'){vn+=v;if(vn<0)vn=0;document.getElementById('vn').innerText=vn}else{ve+=v;if(ve<0)ve=0;document.getElementById('ve').innerText=ve}}
 function zerar(){pn=0;pe=0;document.getElementById('pn').innerText='0';document.getElementById('pe').innerText='0'}
-function novo(){if(confirm('Novo jogo?')){pn=0;pe=0;vn=0;ve=0;rod=1;document.getElementById('pn').innerText='0';document.getElementById('pe').innerText='0';document.getElementById('vn').innerText='0';document.getElementById('ve').innerText='0';document.getElementById('meta').innerText='Meta: 12 pontos • Rodada 1/12'}}
+function novo(){if(confirm('Novo jogo?')){pn=0;pe=0;vn=0;ve=0;rod=1;document.getElementById('pn').innerText='0';document.getElementById('pe').innerText='0';document.getElementById('vn').innerText='0';document.getElementById('ve').innerText='0';document.getElementById('meta').innerText='Meta: 12 • Rodada 1/12'}}
+
+// COLOCA SEU BRASAO DOURADO PEQUENO - 48px
+document.getElementById('brasao').src = "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?q=80&w=100&auto=format&fit=crop";
 </script>
 </body>
 </html>
