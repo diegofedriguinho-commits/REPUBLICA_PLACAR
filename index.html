@@ -8,26 +8,28 @@
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 body{background:#000;display:flex;justify-content:center;font-family:Arial Black,Arial}
 .app{width:100%;max-width:400px;background:#000;border:2px solid #d4a017;display:flex;flex-direction:column;min-height:100vh}
-.topo{background:#000;padding:8px 10px;text-align:center;border-bottom:2px solid #d4a017;display:flex;align-items:center;justify-content:center;gap:8px}
-.topo img{width:200px;height:200px;border-radius:50%;border:2px solid #d4a017;flex-shrink:0;box-shadow:0 0 6px #d4a017}
-.topo h1{color:#d4a017;font-size:12px;letter-spacing:1px;line-height:1;text-align:left}
-.topo .sub{color:#d4a017aa;font-size:6px;letter-spacing:1px;font-family:Arial;display:block;margin-top:2px}
+.topo{background:#000;padding:8px 10px;text-align:center;border-bottom:2px solid #d4a017;display:flex;align-items:center;justify-content:center;gap:10px}
+.topo img{width:80px;height:80px;border-radius:50%;border:2px solid #d4a017;flex-shrink:0;box-shadow:0 0 8px #d4a017;object-fit:cover}
+.topo h1{color:#d4a017;font-size:13px;letter-spacing:1px;line-height:1;text-align:left}
+.topo .sub{color:#d4a017aa;font-size:7px;letter-spacing:1px;font-family:Arial;display:block;margin-top:2px}
 .banner{background:#d4a017;color:#000;text-align:center;padding:5px;font-weight:900;font-size:11px;letter-spacing:1px}
 .pontos{background:#0a0a0a;border:2px solid #d4a017;margin:4px;padding:8px;text-align:center;border-radius:6px}
 .tit{color:#d4a017aa;font-size:9px;letter-spacing:1px}
-.placar{display:flex;justify-content:center;gap:12px;align-items:center;margin:4px 0}
+.placar{display:flex;justify-content:center;gap:12px;align-items:center;margin:6px 0}
 .n{font-size:44px;color:#f1d585;line-height:1;font-weight:900;text-shadow:0 0 8px #d4a017}
 .s{color:#d4a017aa;font-size:18px}
 .meta{color:#d4a017aa;font-size:8px;font-family:Arial}
-.acoes-pontos{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:6px}
-.acoes-pontos button{border:1.5px solid;padding:9px 3px;border-radius:5px;font-weight:900;font-size:9px;touch-action:manipulation}
+.duplo-lado{display:flex;gap:6px;margin-top:8px}
+.coluna{flex:1;display:flex;flex-direction:column;gap:4px;background:#000;border:1px solid #d4a01766;border-radius:6px;padding:5px}
+.coluna-tit{color:#d4a017;font-size:8px;text-align:center;font-weight:900;letter-spacing:1px;padding-bottom:2px;border-bottom:1px solid #d4a01744}
+.coluna button{border:1.5px solid;padding:10px 3px;border-radius:5px;font-weight:900;font-size:10px;touch-action:manipulation}
+.coluna button:active{transform:scale(0.93)}
 .btn-menos{background:#1a1a1a;color:#ff6b6b;border-color:#ff6b6b}
 .btn-mais{background:#1a1a1a;color:#25D366;border-color:#25D366}
 .btn-truco{background:#d4a017;color:#000;border-color:#d4a017}
-.acoes-pontos button:active{transform:scale(0.92)}
-.acoes-gerais{display:flex;gap:3px;margin-top:5px}
-.acoes-gerais button{flex:1;border:1px solid #d4a017;padding:6px;border-radius:4px;font-weight:900;font-size:8px;background:#1a1a1a;color:#d4a017}
-.duplo{display:flex;gap:4px;padding:0 4px 4px}
+.acoes-gerais{display:flex;gap:3px;margin-top:6px}
+.acoes-gerais button{flex:1;border:1px solid #d4a017;padding:7px;border-radius:4px;font-weight:900;font-size:8px;background:#1a1a1a;color:#d4a017}
+.duplo{display:flex;gap:4px;padding:4px}
 .box{flex:1;background:#000;border:2px solid #d4a017;padding:6px;text-align:center;border-radius:6px}
 .box h3{color:#f1d585;font-size:13px}
 .vit{color:#d4a017aa;font-size:8px;margin-top:5px}
@@ -42,27 +44,33 @@ body{background:#000;display:flex;justify-content:center;font-family:Arial Black
 <div class="app">
 
 <div class="topo">
-<img src="./foto.jpg">
+<img src="./foto.jpg" onerror="this.src='./brasao.jpg'">
 <div>
-<h1>REPUBLICA O RETORNO</h1>
+         <h1>REPUBLICA O RETORNO</h1>
 <span class="sub">SINCE 2023</span>
 </div>
 </div>
 
-<div class="banner">★ AQUI A MAGIA ACONTECE ★</div>
+<div class="banner">★ AQUI A MAGIA ACONTECE FLAVIO BOLSONARO #22 ★</div>
 
 <div class="pontos">
 <div class="tit">PONTOS DA PARTIDA</div>
 <div class="placar"><div class="n" id="pn">0</div><div class="s">—</div><div class="n" id="pe">0</div></div>
 <div class="meta" id="meta">Meta: 12 • Rodada 1/12</div>
 
-<div class="acoes-pontos">
-<button class="btn-menos" onclick="pt('nos',-1)">-1 NÓS</button>
-<button class="btn-mais" onclick="pt('nos',1)">+1 NÓS</button>
-<button class="btn-menos" onclick="pt('eles',-1)">-1 ELES</button>
-<button class="btn-mais" onclick="pt('eles',1)">+1 ELES</button>
-<button class="btn-truco" onclick="pt('nos',3)">+3 TRUCO</button>
-<button class="btn-truco" onclick="pt('eles',3)">+3 TRUCO</button>
+<div class="duplo-lado">
+  <div class="coluna">
+    <div class="coluna-tit">NÓS 🇧🇷</div>
+    <button class="btn-menos" onclick="pt('nos',-1)">-1 NÓS</button>
+    <button class="btn-mais" onclick="pt('nos',1)">+1 NÓS</button>
+    <button class="btn-truco" onclick="pt('nos',3)">+3 TRUCO</button>
+  </div>
+  <div class="coluna">
+    <div class="coluna-tit">ELES 🛡️</div>
+    <button class="btn-menos" onclick="pt('eles',-1)">-1 ELES</button>
+    <button class="btn-mais" onclick="pt('eles',1)">+1 ELES</button>
+    <button class="btn-truco" onclick="pt('eles',3)">+3 TRUCO</button>
+  </div>
 </div>
 
 <div class="acoes-gerais">
